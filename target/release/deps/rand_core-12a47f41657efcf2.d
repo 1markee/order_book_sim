@@ -1,0 +1,11 @@
+/Users/markiejr/Rust/cc_order_book_sim/target/release/deps/rand_core-12a47f41657efcf2.d: /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/lib.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/block.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/impls.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/le.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/os.rs
+
+/Users/markiejr/Rust/cc_order_book_sim/target/release/deps/librand_core-12a47f41657efcf2.rlib: /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/lib.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/block.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/impls.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/le.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/os.rs
+
+/Users/markiejr/Rust/cc_order_book_sim/target/release/deps/librand_core-12a47f41657efcf2.rmeta: /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/lib.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/block.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/impls.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/le.rs /Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/os.rs
+
+/Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/lib.rs:
+/Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/block.rs:
+/Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/impls.rs:
+/Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/le.rs:
+/Users/markiejr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rand_core-0.9.5/src/os.rs:
