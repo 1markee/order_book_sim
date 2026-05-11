@@ -57,8 +57,6 @@ pub mod lobster {
 
     use serde::Deserialize;
 
-    use crate::order::{Order, OrderId, OrderType, Price, Side};
-
     #[derive(Debug, Clone, Copy, Deserialize)]
     pub struct MessageRow {
         pub time: f64,
@@ -69,53 +67,19 @@ pub mod lobster {
         pub direction: i8,
     }
 
-    #[derive(Debug, Clone)]
-    pub enum LobsterEvent {
-        Submit(Order),
-        Cancel { id: OrderId, qty: u64 },
-        Delete { id: OrderId },
-        Execute { id: OrderId, qty: u64 },
-        Other,
-    }
-
     pub fn read_messages<P, F>(path: P, mut sink: F) -> std::io::Result<()>
     where
         P: AsRef<Path>,
-        F: FnMut(LobsterEvent),
+        F: FnMut(MessageRow),
     {
         let mut rdr = csv::ReaderBuilder::new()
             .has_headers(false)
             .from_path(path)?;
-        let mut ts: u64 = 0;
         for result in rdr.deserialize::<MessageRow>() {
-            ts += 1;
             let row = result
                 .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidData, e))?;
-            sink(convert(row, ts));
+            sink(row);
         }
         Ok(())
-    }
-
-    fn convert(row: MessageRow, ts: u64) -> LobsterEvent {
-        let id = row.order_id as OrderId;
-        let side = match row.direction {
-            1 => Side::Bid,
-            -1 => Side::Ask,
-            _ => return LobsterEvent::Other,
-        };
-        match row.event_type {
-            1 => LobsterEvent::Submit(Order {
-                id,
-                side,
-                kind: OrderType::Limit,
-                price: Some(Price(row.price)),
-                qty: row.size,
-                ts,
-            }),
-            2 => LobsterEvent::Cancel { id, qty: row.size },
-            3 => LobsterEvent::Delete { id },
-            4 => LobsterEvent::Execute { id, qty: row.size },
-            _ => LobsterEvent::Other,
-        }
     }
 }
